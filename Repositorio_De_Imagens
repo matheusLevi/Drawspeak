@@ -1,0 +1,92 @@
+package desktop;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Repositorio_De_Imagens  {
+     
+	
+		//public class Biblioteca_De_Temas extends MenuTemas{
+		private ArrayList<String> img = new ArrayList<>();
+		private Scanner leitor = new Scanner(System.in);
+		
+		public void criarNovoArquivoDeImagem(int numeroImagens, ArrayList<String> img){
+		
+		img.add("Me gusta");	
+			
+		int i;
+		int size = img.size();
+		
+		Scanner input = new Scanner(System.in);
+		String imagem;
+			
+		for(i=0;i<numeroImagens;i++){
+			System.out.println("Digite o nome do "+ (i+1) + " Tema");
+			imagem = input.next();
+		    img.add(imagem);
+		}
+		
+		img.toString();
+		
+		System.out.println("\nNovas imagens armazenadas:");
+		
+		for(i=size;i<(size+numeroImagens);i++){	
+				System.out.println(img.get(i));
+				}
+		
+		System.out.println();
+		
+		
+		input.close();
+		
+		}
+		
+		
+		public void exibirBibliotecaDeImagens(ArrayList<String> img) {
+			
+			int i;	
+					
+			System.out.println("\nBiblioteca de Imagens atual\n");
+			
+				for(i=0;i<img.size();i++){	
+					System.out.println(img.get(i));
+				}	
+			
+	
+		}
+		
+        public String setImagem(){
+		
+        int i;
+        String imagemCorrespondente;
+        	
+        System.out.println("Biblioteca de Imagens: ");	
+        
+        for(i=0;i<img.size();i++){	
+			System.out.println(img.get(i));
+		}
+        
+        System.out.println("Qual dessas imagens o usuário deseja"
+        		+" anexar ao tema");
+        imagemCorrespondente = leitor.next();
+        
+          if(img.contains(imagemCorrespondente)){
+        	  
+          System.out.println("A imagem " + imagemCorrespondente +" foi indexada ao tema"
+          		+ " selecionado");
+          
+          return imagemCorrespondente;
+         	  
+          }
+          
+          else{System.out.println("Imagem inexistente");}
+			
+          return null;
+          
+		}	
+        
+			
+
+}
+	
+
