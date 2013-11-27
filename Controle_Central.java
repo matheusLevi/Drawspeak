@@ -39,6 +39,7 @@ public boolean carregarMenuPrincipal() {
 		bibliotecaPadrao.add("Xadrez");
 		bibliotecaPadrao.add("Matemática");
 		bibliotecaPadrao.add("Jogos");
+		bibliotecaPadrao.add("Transporte");
 		
 	    bibliotecasPadrao = bibliotecaPadrao.toString();
 		
