@@ -1,0 +1,88 @@
+package desktop;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Repositorio_De_Sons {
+	
+	   
+		private ArrayList<String> som = new ArrayList<>();
+        private Scanner leitor = new Scanner(System.in);
+		
+		public void criarArquivoDeSom(int numeroSom, ArrayList<String> som){
+			
+		int i;
+		int size = som.size();
+		
+		Scanner input = new Scanner(System.in);
+		String tema;
+			
+		for(i=0;i<numeroSom;i++){
+			System.out.println("Digite o nome do "+ (i+1) + " Tema");
+			tema = input.next();
+			som.add(tema);
+		}
+		
+		som.toString();
+		
+		System.out.println("\nNovos temas armazenados:");
+		
+		for(i=size;i<(size+numeroSom);i++){	
+				System.out.println(som.get(i));
+				}
+		
+		System.out.println();
+		
+		
+		input.close();
+		
+		}
+		
+		
+		public void exibirBibliotecaDeSom(ArrayList<String> som) {
+			
+			int i;	
+					
+			System.out.println("\nBiblioteca de Sons atual\n");
+			
+				for(i=0;i<som.size();i++){	
+					System.out.println(som.get(i));
+				}	
+			
+			
+			
+		}
+		
+		public String setSom(){
+			
+	        int i;
+	        String somCorrespondente;
+	        	
+	        System.out.println("Biblioteca de Sons: ");	
+	        
+	        for(i=0;i<som.size();i++){	
+				System.out.println(som.get(i));
+			}
+	        
+	        System.out.println("Qual dessas imagens o usuário deseja"
+	        		+" anexar ao tema");
+	        somCorrespondente = leitor.next();
+	        
+	          if(som.contains(somCorrespondente)){
+	        	  
+	          System.out.println("A imagem " + somCorrespondente +" foi indexada ao tema"
+	          		+ " selecionado"); 
+	          
+	          
+	          return somCorrespondente;
+	        	  
+	          }
+	          
+	          else{System.out.println("Som inexistente");}
+				
+	          return null;
+	          
+			}	
+				
+
+}
