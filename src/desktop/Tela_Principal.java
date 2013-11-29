@@ -1,8 +1,14 @@
 package desktop;
 
-public abstract class Tela_Principal {
+public class Tela_Principal {
 
-public abstract void telasSecundarias();
+// Modificação 1
+ 
+Painel painelDeTemas = new Painel(); //Painel que exibirá o menu de temas
+MenuTemas menuT = new MenuTemas(); // Menu lateral que exibe os temas
+MenuPrincipal menuPrincipal = new MenuPrincipal(); //Menu superior que exibe os servicos genéricos do aplicativo
 
+
+	
 	
 }
