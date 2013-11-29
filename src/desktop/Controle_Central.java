@@ -8,16 +8,20 @@ public class Controle_Central{
 private ArrayList<String> bibliotecaPadrao = new ArrayList<>();
 public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 
-public void exibirTelaSplash(){
-	
+	public void exibirTelaSplash()
+	{
 		System.out.println("Tela Splash exibida");
-		}
-		
-		
-public boolean carregarMenuPrincipal() {
-		
+	}		
+	
+	/**
+	 * Carrega o menu principal.
+	 * 
+	 * @return
+	 */
+	public boolean carregarMenuPrincipal() {
+
 		System.out.println("Menu Principal");
-		
+
 		return true;
 	}
 	
