@@ -72,7 +72,7 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 	String opcao1,opcao2,verificador;
 	//Scanner input = new Scanner(System.in);
 	//Scanner leitorVerify = new Scanner(System.in);
-	ScannerDrawspeak leitor = new ScannerDrawspeak();
+	ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
 	
 	
 	boolean carregadoMenu=false,carregadoTemas=false,carregadoBiblioteca=false, error=false;

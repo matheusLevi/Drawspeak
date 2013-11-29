@@ -15,7 +15,7 @@ public class Biblioteca_De_Temas {
 	}
 	
     //Scanner input = new Scanner(System.in);
-	ScannerDrawspeak leitor = new ScannerDrawspeak();
+	ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
 	
 	public  void criarTemas(int numeroTemas, ArrayList<String> bibliotecaPadrao){
 		

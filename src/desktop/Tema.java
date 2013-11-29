@@ -26,7 +26,7 @@ public class Tema {
 	public  void criarModulo(String nomeTema, Tema temaSelecionado, ArrayList<String> bibliotecaPadrao){
 				
 	  //Scanner input = new Scanner(System.in); 
-	  ScannerDrawspeak leitor = new ScannerDrawspeak();	
+	  ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();	
 	  String nomeModulo,imagemSelecionada,somSelecionado,textoSelecionado;
 	  		
 	  //Repositorio_De_Imagens bibliotecaImagens = new Repositorio_De_Imagens();

@@ -1,7 +1,7 @@
 package desktop;
 import java.util.Scanner;
 
-public class ScannerDrawspeak {
+public class ComunicacaoDrawspeak {
 
 	Scanner input = new Scanner(System.in);
 	

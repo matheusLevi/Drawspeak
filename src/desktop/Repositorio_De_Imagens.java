@@ -9,7 +9,7 @@ public class Repositorio_De_Imagens  {
 		//public class Biblioteca_De_Temas extends MenuTemas{
 		private ArrayList<String> img = new ArrayList<>();
 		//private Scanner leitor = new Scanner(System.in);
-		ScannerDrawspeak leitor = new ScannerDrawspeak();
+		ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
 		
 		public void criarNovoArquivoDeImagem(int numeroImagens, ArrayList<String> img){
 		
