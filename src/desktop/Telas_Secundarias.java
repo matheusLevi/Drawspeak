@@ -9,33 +9,47 @@ public class Telas_Secundarias extends Tela_Principal{
 	
 	public void telaConfiguracoes(){
 		
+	  Painel painelConfig = new Painel();	
+		
+	  painelConfig.x = 150;
+	  painelConfig.y = 150;
+	  
+	  painelConfig.altura=100;
+	  painelConfig.largura=120;
+	  
 	  System.out.println("Tela de Configurações exibida");
 		
 	}
 	
 	public void telaVozes(){
 		
+		  Painel painelVozes = new Painel();	
+			
+		  painelVozes.x = 150;
+		  painelVozes.y = 150;
+		  
+		  painelVozes.altura=50;
+		  painelVozes.largura=80;
+		  
 		  System.out.println("Tela de vozes exibida");
 			
 		}
 	
 	public void login(){
 		
+		  Painel painelLogin = new Painel();	
+			
+		  painelLogin.x = 150;
+		  painelLogin.y = 150;
+		  
+		  painelLogin.altura=40;
+		  painelLogin.largura=80;
+		
 		  System.out.println("Tela de login exibida");
 			
 		}
 	
-	public void sessaoConvidado(){
-		
-		  System.out.println("Sessão convidado ativado");
-			
-		}
-	
-	public void sessaoEu(){
-		
-		  System.out.println("Sessão eu ativado");
-			
-		}
+
 	
 	public void encerrarSessao(){
 		
@@ -44,6 +58,15 @@ public class Telas_Secundarias extends Tela_Principal{
 		}
 	
 	public void ajudaDrawspeak(){
+		
+		  Painel painelAjuda = new Painel();	
+			
+		  painelAjuda.x = 150;
+		  painelAjuda.y = 150;
+		  
+		  painelAjuda.altura=50;
+		  painelAjuda.largura=80;
+		
 		
 		  System.out.println("Ajuda do Drawspeak exibida");
 			
@@ -58,7 +81,7 @@ public class Telas_Secundarias extends Tela_Principal{
 	//Telas do Menu de Temas
 	
 			
-	
+	/**
 	public void telaTemas(String Biblioteca){
 		
 	
@@ -78,11 +101,20 @@ public class Telas_Secundarias extends Tela_Principal{
 			
 	}
 	
+	**/
 	
 	//Telas do Menu de Volume
 	
 public void telaVolume(String servicoRequerido){
 		
+	  Painel painelVolume = new Painel();	
+		
+	  painelVolume.x = 30;
+	  painelVolume.y = 50;
+	  
+	  painelVolume.altura=50;
+	  painelVolume.largura=80;
+	
 		
 		if(servicoRequerido.equals("Aumentar")){
 			System.out.println("Volume");
@@ -96,12 +128,7 @@ public void telaVolume(String servicoRequerido){
 		}
 	
 	
-	@Override
-	public void telasSecundarias() {
-		// TODO Auto-generated method stub
-		
-	}
-		
+	
 		
 	}
 

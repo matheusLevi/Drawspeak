@@ -25,8 +25,6 @@ public  class MenuPrincipal extends Menu{
 		    servicos.add("Configurações");
 			servicos.add("Vozes");
 			servicos.add("Login");
-			servicos.add("Sessão convidado");
-			servicos.add("Sessão eu");
 			servicos.add("Encerrar Sessão");
 			servicos.add("Ajuda Drawspeak");
 			servicos.add("Sair");
