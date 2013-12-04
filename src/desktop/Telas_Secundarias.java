@@ -81,7 +81,7 @@ public class Telas_Secundarias extends Tela_Principal{
 	//Telas do Menu de Temas
 	
 			
-	/**
+	
 	public void telaTemas(String Biblioteca){
 		
 	
@@ -101,7 +101,7 @@ public class Telas_Secundarias extends Tela_Principal{
 			
 	}
 	
-	**/
+	
 	
 	//Telas do Menu de Volume
 	

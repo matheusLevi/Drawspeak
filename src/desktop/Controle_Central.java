@@ -126,14 +126,6 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 	    	tela2.login();
 	    }
 	    
-        else if(opcao2.equals("SessãoConvidado")){
-        	tela2.sessaoConvidado();
-        	
-	    }
-	    
-        else if(opcao2.equals("SessãoEu")){
-        	tela2.sessaoEu();
-	    }
 	    
         else if(opcao2.equals("EncerrarSessão")){
         	tela2.encerrarSessao();
@@ -160,7 +152,7 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 	  opcao2 = leitor.lerOpcao();
 	  contain = bibliotecaT.containsBiblioteca(opcao2, controle.bibliotecaPadrao);
 	    if(contain==true){
-	    	tela2.telaTemas(opcao2);
+	    	System.out.println("Modulos do tema " + opcao2 + " exibidos");
 	    	}
 	    else if(opcao2.equals("AdquirirTemas")){ 	
 	    int numeroDeTemas = tela2.criarTemas(opcao2);
