@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class Controle_Central{
 	
-private ArrayList<String> bibliotecaPadrao = new ArrayList<>();
-public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
+private ArrayList<String> bibliotecaPadrao = new ArrayList<>();  //poderia ir no modelo de dados
+public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir no modelo de dados
 
 	public void exibirTelaSplash()
 	{
-		System.out.println("Tela Splash exibida");
+		System.out.println("Tela Splash exibida"); //tela secudária
 	}		
 	
 	/**
@@ -20,22 +20,23 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 	 */
 	public boolean carregarMenuPrincipal() {
 
-		System.out.println("Menu Principal");
+		System.out.println("Menu Principal"); //Carregar na classe MenuPrincipal através da chamada de função da classe TelaPrincipal
 
 		return true;
 	}
 	
-	public boolean carregarTemasDaBiblioteca(String biblioteca) {
+	
+	public boolean carregarBibliotecasTemas() { //**1 - Controle chama MenuPrincipal 
+		                                        //  2 - MenuPrincipal chama MenuDeTemas
+		                                        //  3 - MenuDeTemas chama BibliotecaDeTemas
+		                                        //  4 - BibliotecaDeTemas chama DadosDrawspeak
+		                                        //  5 - DadosDrawspeak retorna os dados(Temas) a BibliotecaDeTemas
+		                                        //  6 - Biblioteca De Temas retorna os dados ao MenuDeTemas
+		                                        //  7 - MenuDeTemas retorna valor booleano a MenuPrincipal
+		                                        //  8 - MenuPrincipal retorna valor booleano ao controle
+		String bibliotecasPadrao; 
 		
-		System.out.println("Temas da Biblioteca " + biblioteca + 
-				" exibidos");
-		
-		return true;
-	}
-
-	public boolean carregarBibliotecasTemas() {
-		
-		String bibliotecasPadrao;
+		//extrairDadosDaBiblioteca();
 		
 		bibliotecaPadrao.add("Memes");
 		Tema memes = new Tema("Memes");
@@ -66,6 +67,14 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 		return true;
 	}
 	
+    public boolean carregarTemasDaBiblioteca(String biblioteca) {
+		
+		System.out.println("Temas da Biblioteca " + biblioteca +  //Carregar na classe MenuDeTemas
+				" exibidos");
+		
+		return true;
+	}
+
 	public static void main(String[] args) {
 		
 	String bibliotecaSelecionada="Memes 1";
@@ -85,7 +94,7 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
 	MenuTemas menut = new MenuTemas();
 	MenuVolume volume = new MenuVolume();
 	Telas_Secundarias tela2 = new Telas_Secundarias();
-	Biblioteca_De_Temas bibliotecaT = new Biblioteca_De_Temas(controle.bibliotecaPadraoTemas);
+	Biblioteca_De_Temas bibliotecaT = new Biblioteca_De_Temas(controle.bibliotecaPadraoTemas); //Alterar chamada para a classe DadosDrawspeak
 	
 	
 	controle.exibirTelaSplash();
@@ -228,6 +237,7 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();
     }
 		  	  
     else if(verificador.equals("n") || verificador.equals("N")){
+	
 	verify=false;	
 	}
 		    
