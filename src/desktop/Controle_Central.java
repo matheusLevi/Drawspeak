@@ -112,7 +112,7 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	carregado=true;
 	System.out.println("Drawspeak carregado\n");
 	System.out.println("\nUsuário, digita a opção correspondente ao que você usará no aplicativo\n\n"
-			+ "Opções\n1)Menu Principal\n2)Menu de Temas\n3)Menu de Volume\n4)Gerenciador de Temas");
+			+ "Opções\n1)Menu Principal\n2)Menu de Temas\n3)Menu de Volume\n4)Criar Módulos de um tema existente");
 	//opcao1 = input.next();
 	
 	   // ---- Modificação 1
@@ -174,7 +174,22 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	  opcao2 = ComunicacaoDrawspeak.lerOpcao();
 	  contain = bibliotecaT.containsBiblioteca(opcao2, controle.bibliotecaPadrao);
 	    if(contain==true){
+	    	
+	    	String op;
+	    	
 	    	System.out.println("Modulos do tema " + opcao2 + " exibidos");
+	    	System.out.println("Deseja selecionar um módulo para reproduzir som?");
+	    	op = ComunicacaoDrawspeak.lerOpcao();
+	    	   if(op.equals("s")){
+	    		 
+	    	   String nomeModulo;	   
+	    	   Reprodutor_De_Sons reprodutor = new Reprodutor_De_Sons();
+	    	   
+	    	   System.out.println("digite o nome do módulo");
+	    	   nomeModulo = ComunicacaoDrawspeak.lerModulo();
+	    	   reprodutor.reproduzirSom(nomeModulo);
+	    	   }
+	    	
 	    	}
 	    else if(opcao2.equals("AdquirirTemas")){ 	
 	    int numeroDeTemas = tela2.criarTemas(opcao2);
@@ -212,15 +227,8 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	  
 	  case "4":
 	  System.out.println();
-	  System.out.println("Escolha a opcao desejada?\n\n1)Criar Módulo de um Tema existente\n2)Modificar Módulo"
-	  		+ " de um Tema existente\n3)Mudar arquivo de Imagem de um Módulo existente\n4)"
-	  		+ "Mudar arquivo de Som de um Módulo existente\n5)Mudar arquivo de Texto de um Módulo existente");
-	  //opcao2 = input.next();
 	  
-	  //------- Modificação 5
-	  
-	  opcao2 = ComunicacaoDrawspeak.lerOpcao();
-	    if(opcao2.equals("1")){
+	   
 	      bibliotecaT.exibirBibliotecaDeTemas(controle.bibliotecaPadrao);
 	      System.out.println("\nSelecione o tema correspondente");
 	      //opcao2 = input.next();
@@ -245,10 +253,8 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	      //contain = bibliotecaT.containsBiblioteca(opcao2, bibliotecaPadraoTemas);
 	      
 	      }
-	      else{
-	    	  
-	      }
-	    }
+	      
+	    
 	  
 	  }
 	  
