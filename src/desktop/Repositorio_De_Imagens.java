@@ -23,7 +23,7 @@ public class Repositorio_De_Imagens  {
 			
 		for(i=0;i<numeroImagens;i++){
 			//leitor.lerImagem();
-			System.out.print("Digite o nome do "+ (i+1) + " Imagem");
+			System.out.println("Digite o nome do "+ (i+1) + " Imagem");
 			imagem = ComunicacaoDrawspeak.lerImagem();
 		    img.add(imagem);
 		}
