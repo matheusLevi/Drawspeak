@@ -2,7 +2,7 @@ package desktop;
 
 public class Modulo {
 
-private String nome,tema,imagem,som,texto;	
+  public String nome,tema,imagem,som,texto;	
 	
   public Modulo(String temaSelecionado, String novoNome, String novaImagem, String novoSom, String novoTexto){
 	
@@ -14,13 +14,13 @@ private String nome,tema,imagem,som,texto;
 	
    }	
 	
-	public void detalhesModulo(String nomeTema){
+	public void detalhesModulo(Modulo modulo){
 		
-	System.out.println("Tema: " + tema);
-	System.out.println("Nome: " + nome);
-	System.out.println("imagem associada = " + imagem);
-	System.out.println("som associado = " + som);
-	System.out.println("texto associado = " + texto);	
+	System.out.println("Tema: " + modulo.tema);
+	System.out.println("Nome: " + modulo.nome);
+	System.out.println("imagem associada = " + modulo.imagem);
+	System.out.println("som associado = " + modulo.som);
+	System.out.println("texto associado = " + modulo.texto);	
 	}
 	
 

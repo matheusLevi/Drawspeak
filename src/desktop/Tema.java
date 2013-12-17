@@ -37,14 +37,15 @@ public class Tema {
 	  somSelecionado = repositorioSons.setSom();
 	  System.out.println("Selecionar Texto");
 	  textoSelecionado = bibliotecaTextos.setTexto();
-		
 	  Modulo modulo = new Modulo(nomeTema,nomeModulo,imagemSelecionada,somSelecionado,textoSelecionado);
 	  tema.add(modulo);
 	  
 	  System.out.println("Módulo " + nomeModulo + " criado");
+	  
 	  System.out.println("\nDetalhes do módulo");
 	  
-	  modulo.detalhesModulo(nomeTema);
+	  modulo.detalhesModulo(modulo);
+	  
 	  nomeModulos.add(nomeModulo);
 	  
 	}

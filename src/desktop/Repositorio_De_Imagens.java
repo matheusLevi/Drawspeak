@@ -148,6 +148,9 @@ public class Repositorio_De_Imagens  {
            imagemAnex=true;
            System.out.println("imagem " + imagemSelecionada + " anexada\n");
            imagemCorrespondente = imagemSelecionada;
+           
+           return imagemCorrespondente;
+           
            }
           
                    

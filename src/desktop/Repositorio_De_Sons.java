@@ -110,7 +110,6 @@ public class Repositorio_De_Sons {
            
            String somSelecionado;
            int size = som.size();
-           int numImg = quantSom;
           
            
            System.out.println("Repositório de Sons Atual: \n");
@@ -125,11 +124,12 @@ public class Repositorio_De_Sons {
            somSelecionado = ComunicacaoDrawspeak.lerSom();
            //System.out.println("depois do Scanner inputImage");
            verify2 = som.contains(somSelecionado);
-           //System.out.println(verify2);
+           System.out.println(verify2);
            if(verify2==true){
            somAnex=true;
            System.out.println("arquivo de som " + somSelecionado + " anexado\n");
            somCorrespondente = somSelecionado;
+           return somCorrespondente;
            }
           
                    
