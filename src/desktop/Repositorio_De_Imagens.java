@@ -1,7 +1,7 @@
 package desktop;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Repositorio_De_Imagens  {
      
@@ -9,11 +9,11 @@ public class Repositorio_De_Imagens  {
 		//public class Biblioteca_De_Temas extends MenuTemas{
 		private ArrayList<String> img = new ArrayList<>();
 		//private Scanner leitor = new Scanner(System.in);
-		ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
+		//ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
 		
 		public void criarNovoArquivoDeImagem(int numeroImagens, ArrayList<String> img){
 		
-		img.add("Me gusta");	
+		//img.add("Me gusta");	
 			
 		int i;
 		int size = img.size();
@@ -23,8 +23,8 @@ public class Repositorio_De_Imagens  {
 			
 		for(i=0;i<numeroImagens;i++){
 			//leitor.lerImagem();
-			System.out.println("Digite o nome do "+ (i+1) + " Tema");
-			imagem = leitor.lerImagem();
+			System.out.print("Digite o nome do "+ (i+1) + " Imagem");
+			imagem = ComunicacaoDrawspeak.lerImagem();
 		    img.add(imagem);
 		}
 		
@@ -73,7 +73,7 @@ public class Repositorio_De_Imagens  {
         
         System.out.println("Qual dessas imagens o usuário deseja"
         		+" anexar ao tema");
-        imagemCorrespondente = leitor.lerImagem();
+        imagemCorrespondente = ComunicacaoDrawspeak.lerImagem();
         
           if(img.contains(imagemCorrespondente)){
         	  
@@ -91,7 +91,7 @@ public class Repositorio_De_Imagens  {
               		+ " de imagens\nVocê gostaria de importar um arquivo de imagem do "
               		+ " gerenciador de arquivos? ");
               
-              op = leitor.lerOpcao();
+              op = ComunicacaoDrawspeak.lerOpcao();
               
               System.out.println("depois de op = leitor.next();");
               
@@ -104,7 +104,7 @@ public class Repositorio_De_Imagens  {
            boolean imagemAnex=false;
         	   
            System.out.println("Digite quantas imagens deseja importar");
-           quantImagens = leitor.lerInteiro(); 
+           quantImagens = ComunicacaoDrawspeak.lerInteiro(); 
            criarNovoArquivoDeImagem(quantImagens, img);
            
            
@@ -140,7 +140,7 @@ public class Repositorio_De_Imagens  {
            System.out.println(cont);
            
            System.out.println("\nSelecione uma das imagens para anexá-la ao modulo");
-           imagemSelecionada = leitor.lerImagem();
+           imagemSelecionada = ComunicacaoDrawspeak.lerImagem();
            //System.out.println("depois do Scanner inputImage");
            verify2 = img.contains(imagemSelecionada);
            //System.out.println(verify2);

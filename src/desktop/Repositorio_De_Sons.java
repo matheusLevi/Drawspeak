@@ -1,25 +1,25 @@
 package desktop;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+import desktop.ComunicacaoDrawspeak;;
 
 public class Repositorio_De_Sons {
 	
 	   
 		private ArrayList<String> som = new ArrayList<>();
-        private Scanner leitor = new Scanner(System.in);
+        //private Scanner leitor = new Scanner(System.in);
 		
 		public void criarArquivoDeSom(int numeroSom, ArrayList<String> som){
 			
 		int i;
 		int size = som.size();
 		
-		Scanner input = new Scanner(System.in);
+		//Scanner input = new Scanner(System.in);
 		String sound;
 			
 		for(i=0;i<numeroSom;i++){
-			System.out.println("Digite o nome do "+ (i+1) + " Tema");
-			sound = input.next();
+			System.out.println("Digite o nome do "+ (i+1) + " Som");
+			sound = ComunicacaoDrawspeak.lerTema();
 			som.add(sound);
 		}
 		
@@ -57,7 +57,7 @@ public class Repositorio_De_Sons {
 			
 	        int i;
 	        String somCorrespondente,op;
-	        Scanner inputSom = new Scanner(System.in);
+	        //Scanner inputSom = new Scanner(System.in);
 	        
 	        System.out.println("Biblioteca de Sons: ");	
 	        
@@ -67,7 +67,7 @@ public class Repositorio_De_Sons {
 	        
 	        System.out.println("Qual desses Sons o usuário deseja"
 	        		+" anexar ao tema");
-	        somCorrespondente = leitor.next();
+	        somCorrespondente = ComunicacaoDrawspeak.lerSom();
 	        
 	          if(som.contains(somCorrespondente)){
 	        	  
@@ -87,7 +87,7 @@ public class Repositorio_De_Sons {
               		+ " de som\nVocê gostaria de importar um arquivo de som do "
               		+ " gerenciador de arquivos? ");
               
-              op = leitor.next();
+              op = ComunicacaoDrawspeak.lerOpcao();
               
               System.out.println("depois de op = leitor.next();");
               
@@ -100,7 +100,7 @@ public class Repositorio_De_Sons {
            boolean somAnex=false;
         	   
            System.out.println("Digite quantos arquivos de sons deseja importar");
-           quantSom = inputSom.nextInt(); 
+           quantSom = ComunicacaoDrawspeak.lerInteiro(); 
            criarArquivoDeSom(quantSom, som);
            
            
@@ -108,10 +108,10 @@ public class Repositorio_De_Sons {
         	   
            do{
            
-           String imagemSelecionada;
+           String somSelecionado;
            int size = som.size();
            int numImg = quantSom;
-           int cont=0;
+          
            
            System.out.println("Repositório de Sons Atual: \n");
            
@@ -119,19 +119,17 @@ public class Repositorio_De_Sons {
 				System.out.println(som.get(i));
 				}
            
-           if(cont==0){
-           inputSom.nextLine();
-           }
+          
            
            System.out.println("\nSelecione uma dos arquivos de sons para anexá-lo ao modulo");
-           imagemSelecionada = inputSom.nextLine();
+           somSelecionado = ComunicacaoDrawspeak.lerSom();
            //System.out.println("depois do Scanner inputImage");
-           verify2 = som.contains(imagemSelecionada);
+           verify2 = som.contains(somSelecionado);
            //System.out.println(verify2);
            if(verify2==true){
            somAnex=true;
-           System.out.println("arquivo de som " + imagemSelecionada + " anexado\n");
-           somCorrespondente = imagemSelecionada;
+           System.out.println("arquivo de som " + somSelecionado + " anexado\n");
+           somCorrespondente = somSelecionado;
            }
           
                    

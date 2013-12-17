@@ -1,11 +1,11 @@
 package desktop;
 
-import java.util.Scanner;
+import desktop.ComunicacaoDrawspeak;
 
 public class Telas_Secundarias extends Tela_Principal{
 	
 	//Telas do Menu Principal
-	Scanner input = new Scanner(System.in);
+	//Scanner input = new Scanner(System.in);
 	
 	public void telaConfiguracoes(){
 		
@@ -95,7 +95,7 @@ public class Telas_Secundarias extends Tela_Principal{
 	int numTemas;	
 		
 	System.out.println("Quantos temas você deseja adquirir?");
-	numTemas = input.nextInt();
+	numTemas = ComunicacaoDrawspeak.lerInteiro();
 	
 	return numTemas;
 			

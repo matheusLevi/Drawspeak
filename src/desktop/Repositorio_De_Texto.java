@@ -1,24 +1,25 @@
 package desktop;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
+import desktop.ComunicacaoDrawspeak;
 
 public class Repositorio_De_Texto{
 		
 		private ArrayList<String> txt = new ArrayList<>();	
-		private Scanner leitor = new Scanner(System.in);
+		//private Scanner leitor = new Scanner(System.in);
 	   
 		public void criarArquivoDeTexto(int numeroTexto, ArrayList<String> txt){
 			
 		int i;
 		int size = txt.size();
 		
-		Scanner input = new Scanner(System.in);
+		//Scanner input = new Scanner(System.in);
 		String tema;
 			
 		for(i=0;i<numeroTexto;i++){
 			System.out.println("Digite o nome do "+ (i+1) + " Texto");
-			tema = input.next();
+			tema = ComunicacaoDrawspeak.lerTexto();
 			txt.add(tema);
 		}
 		
@@ -32,8 +33,6 @@ public class Repositorio_De_Texto{
 		
 		System.out.println();
 		
-		
-		input.close();
 		
 		}
 		
@@ -64,7 +63,7 @@ public class Repositorio_De_Texto{
 	        
 	        System.out.println("Qual desses textos o usuário deseja"
 	        		+" anexar ao tema");
-	        textoCorrespondente = leitor.next();
+	        textoCorrespondente = ComunicacaoDrawspeak.lerTexto();
 	        
 	          if(txt.contains(textoCorrespondente)){
 	        	  

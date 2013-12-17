@@ -1,7 +1,8 @@
 package desktop;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
+import desktop.ComunicacaoDrawspeak;
 
 public class Tema {
 
@@ -15,29 +16,21 @@ public class Tema {
 	nome = nomeTema;
 	
 	}
-	
-	public Tema(){
-		
-		
-	}
-	
 		
 	
 	public  void criarModulo(String nomeTema, Tema temaSelecionado, ArrayList<String> bibliotecaPadrao){
 				
 	  //Scanner input = new Scanner(System.in); 
-	  ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();	
+	  //ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();	
 	  String nomeModulo,imagemSelecionada,somSelecionado,textoSelecionado;
 	  		
 	  //Repositorio_De_Imagens bibliotecaImagens = new Repositorio_De_Imagens();
 	  Repositorio_De_Imagens repositorioImagens = new Repositorio_De_Imagens();
 	  Repositorio_De_Sons repositorioSons = new Repositorio_De_Sons();
 	  Repositorio_De_Texto bibliotecaTextos = new Repositorio_De_Texto();
-	  
-	  
-	  
+	    
 	  System.out.println("Digite o nome do módulo");	
-	  nomeModulo = leitor.lerModulo();
+	  nomeModulo = ComunicacaoDrawspeak.lerModulo();
 	  System.out.println("Selecionar imagem");
 	  imagemSelecionada = repositorioImagens.setImagem();
 	  System.out.println("Selecionar Som");

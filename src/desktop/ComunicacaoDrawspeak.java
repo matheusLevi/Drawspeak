@@ -3,19 +3,19 @@ import java.util.Scanner;
 
 public class ComunicacaoDrawspeak {
 
-	Scanner input = new Scanner(System.in);
+	static Scanner input = new Scanner(System.in);
 	
-	public String lerOpcao (){
+	public static String lerOpcao (){
 	
 	String op;	
 	
-	op = input.nextLine();
+	op = input.next();
 	
 	return op;
 		
 	}
 	
-	public int lerInteiro (){
+	public static int lerInteiro (){
 		
 	int inteiro;	
 		
@@ -25,56 +25,54 @@ public class ComunicacaoDrawspeak {
 	
 	}
 	
-	public String lerTema(){
+	public static String lerTema(){
 	
 	String tema;	
 		
-	tema = input.nextLine();
+	tema = input.next();
 	
 	return tema;
 		
 	}
 	
-	public String lerModulo(){
+	public static String lerModulo(){
 		
 	String modulo;	
 		
-	modulo = input.nextLine();	
+	modulo = input.next();	
 		
 	return modulo;
 	
 	}
 	
-	public String lerImagem(){
+	public static String lerImagem(){
 		
 		String arqImagem;
 		
-		arqImagem = input.nextLine();	
+		arqImagem = input.next();	
 			
 		return arqImagem;
 		
 		}
 	
-	public String lerSom(){
+	public static String lerSom(){
 		
 		String arqSom;
 		
-		arqSom = input.nextLine();	
+		arqSom = input.next();	
 			
 		return arqSom;
 		
 		}
 	
-    public String lerTexto(){
+    public static String lerTexto(){
 		
     	String arqTexto;
     	
-		arqTexto = input.nextLine();	
+		arqTexto = input.next();	
 			
 		return arqTexto;
 		
 		}
-	
-	
 	
 }

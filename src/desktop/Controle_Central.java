@@ -1,6 +1,7 @@
 package desktop;
 
-import java.util.Scanner;
+//import java.util.Scanner;
+import desktop.ComunicacaoDrawspeak;
 import java.util.ArrayList;
 
 public class Controle_Central{
@@ -81,7 +82,7 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	String opcao1,opcao2,verificador;
 	//Scanner input = new Scanner(System.in);
 	//Scanner leitorVerify = new Scanner(System.in);
-	ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
+	//ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
 	
 	
 	boolean carregadoMenu=false,carregadoTemas=false,carregadoBiblioteca=false, error=false;
@@ -113,16 +114,25 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	System.out.println("\nUsuário, digita a opção correspondente ao que você usará no aplicativo\n\n"
 			+ "Opções\n1)Menu Principal\n2)Menu de Temas\n3)Menu de Volume\n4)Gerenciador de Temas");
 	//opcao1 = input.next();
-	opcao1 = leitor.lerOpcao();
+	
+	   // ---- Modificação 1
+	
+	opcao1 = ComunicacaoDrawspeak.lerOpcao();
 	  switch(opcao1){
 	  
 	  case "1":
       menup.layout("Preto");
       System.out.println("\nMenu Principal\n");
       menup.servicos();	  
-	  System.out.println("\nQual serviço você deseja do Menu Principal?"); //Digitar nome do serviço do Menu Principal(sem espaços)
+	  System.out.println("\nQual serviço você deseja do Menu Principal?");
+	  
+	  
+	  //Digitar nome do serviço do Menu Principal(sem espaços)
+	  
+	  // ----- Modificação 2
+	  
 	  //opcao2 = input.next();
-	  opcao2 = leitor.lerOpcao();
+	  opcao2 = ComunicacaoDrawspeak.lerOpcao();
 	    if(opcao2.equals("Configurações")){
 	    	tela2.telaConfiguracoes();}
 	    
@@ -158,7 +168,10 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	  menut.servicos(controle.bibliotecaPadrao);
 	  System.out.println("\nQual tema você deseja do Menu de Temas?"); //Digitar nome do Tema selecionado
 	  //opcao2 = input.next();
-	  opcao2 = leitor.lerOpcao();
+	  
+	  //Modificação 3
+	  
+	  opcao2 = ComunicacaoDrawspeak.lerOpcao();
 	  contain = bibliotecaT.containsBiblioteca(opcao2, controle.bibliotecaPadrao);
 	    if(contain==true){
 	    	System.out.println("Modulos do tema " + opcao2 + " exibidos");
@@ -181,7 +194,10 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	  volume.servicos();
 	  System.out.println("\nQual serviço você deseja do menu Volume?"); //Digite "Aumentar" ou "Diminuir"
 	  //opcao2=input.next();
-	  opcao2 = leitor.lerOpcao();
+	  
+	  //----- Modificação 4
+	  
+	  opcao2 = ComunicacaoDrawspeak.lerOpcao();
 	    if(opcao2.equals("Aumentar") || opcao2.equals("Diminuir")){
 	    	tela2.telaVolume(opcao2);
 	    	}
@@ -200,18 +216,26 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	  		+ " de um Tema existente\n3)Mudar arquivo de Imagem de um Módulo existente\n4)"
 	  		+ "Mudar arquivo de Som de um Módulo existente\n5)Mudar arquivo de Texto de um Módulo existente");
 	  //opcao2 = input.next();
-	  opcao2 = leitor.lerOpcao();
+	  
+	  //------- Modificação 5
+	  
+	  opcao2 = ComunicacaoDrawspeak.lerOpcao();
 	    if(opcao2.equals("1")){
 	      bibliotecaT.exibirBibliotecaDeTemas(controle.bibliotecaPadrao);
 	      System.out.println("\nSelecione o tema correspondente");
 	      //opcao2 = input.next();
-	      opcao2 = leitor.lerTema();
+	      
+	 //--------- Modificação 6     
+	      
+	      opcao2 = ComunicacaoDrawspeak.lerTema();
 	      contain = bibliotecaT.containsBiblioteca(opcao2, controle.bibliotecaPadrao);
 	      if(contain == true){
 	      System.out.println("entrou no if"); 
-	      Tema temaSelecionado = new Tema();	  
+	      Tema temaSelecionado = new Tema(opcao2);	  
+	      
 	      int indice;
 	      String sTemaSelecionado;
+	      
 	      indice = controle.bibliotecaPadrao.indexOf(opcao2);
 	      sTemaSelecionado = controle.bibliotecaPadrao.get(indice);
 	      System.out.println("funcao get de StemaSelecionado retornou");
@@ -230,7 +254,11 @@ public ArrayList<Tema> bibliotecaPadraoTemas = new ArrayList<>();  //poderia ir 
 	  
 	System.out.println("\nDeseja acessar outro serviço do Drawspeak?(s/n)");
 	//verificador = leitorVerify.next();
-	verificador = leitor.lerOpcao();
+	
+	
+	//--------- Modificação 7
+	
+	verificador = ComunicacaoDrawspeak.lerOpcao();
 	
     if(verificador.equals("s") || verificador.equals("S")){
     continue;	

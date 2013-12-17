@@ -1,7 +1,8 @@
 package desktop;
 
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
+import desktop.ComunicacaoDrawspeak;
 
 public class Biblioteca_De_Temas {
 	
@@ -15,7 +16,7 @@ public class Biblioteca_De_Temas {
 	}
 	
     //Scanner input = new Scanner(System.in);
-	ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
+	//ComunicacaoDrawspeak leitor = new ComunicacaoDrawspeak();
 	
 	public  void criarTemas(int numeroTemas, ArrayList<String> bibliotecaPadrao){
 		
@@ -28,7 +29,7 @@ public class Biblioteca_De_Temas {
 		
 	for(i=0;i<numeroTemas;i++){
 		System.out.println("Digite o nome do "+ (i+1) + " Tema");
-		tema = leitor.lerTema();
+		tema = ComunicacaoDrawspeak.lerTema();
 		Tema tema1 = new Tema(tema);
 		temas.add(tema1);
 		bibliotecaPadrao.add(tema);
